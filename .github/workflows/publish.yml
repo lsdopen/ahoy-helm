@@ -1,4 +1,4 @@
-name: Publish charts
+name: Chart Publish
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  release-chart:
+  publish-chart:
       runs-on: ubuntu-latest
 
       steps:
