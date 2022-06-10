@@ -4,7 +4,7 @@ version: '0.14.0'
 appVersion: '0.14.0'
 dependencies:
   - name: postgresql
-    version: "8.10.4"
+    version: "10.16.1"
     repository: "https://charts.bitnami.com/bitnami"
   - name: keycloak
     condition: keycloak.install

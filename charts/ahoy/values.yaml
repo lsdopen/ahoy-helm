@@ -117,6 +117,9 @@ keycloak:
   postgresql:
     nameOverride: keycloak-postgresql
 
+    containerPorts:
+      postgresql: 5432
+
     # If `true`, the Postgresql dependency is enabled
     enabled: true
     # PostgreSQL User to create
