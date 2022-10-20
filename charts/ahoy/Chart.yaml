@@ -4,17 +4,17 @@ version: '1.0.0-SNAPSHOT'
 appVersion: '1.0.0-SNAPSHOT'
 dependencies:
   - name: postgresql
-    version: "10.16.1"
+    version: "10.16.2"
     repository: "https://charts.bitnami.com/bitnami"
   - name: keycloak
     condition: keycloak.install
-    version: "15.1.0"
+    version: "17.0.3"
     repository: "https://codecentric.github.io/helm-charts"
   - name: argo-cd
     condition: argo-cd.install
-    version: "3.26.5"
+    version: "5.6.0"
     repository: "https://argoproj.github.io/argo-helm"
   - name: sealed-secrets
     condition: sealed-secrets.install
-    version: "1.16.1"
+    version: "2.7.0"
     repository: "https://bitnami-labs.github.io/sealed-secrets"
