@@ -3,7 +3,7 @@ entries:
   ahoy:
   - apiVersion: v2
     appVersion: 1.0.0-SNAPSHOT
-    created: "2022-10-20T13:03:17.368296015Z"
+    created: "2022-10-21T07:58:52.389157288Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -20,8 +20,22 @@ entries:
       name: sealed-secrets
       repository: https://bitnami-labs.github.io/sealed-secrets
       version: 2.7.0
-    digest: 08505c87168cd127e0636c4d142872d7953d468addf29bd33bd88cb1c3bbad95
+    description: A Helm chart for Ahoy; release manager tool for Kubernetes
+    digest: da2cbb7096df864ef90744ebcefd8406b3c2013a8358223917b9c467c6518f7e
+    home: https://ahoyrm.io/
+    icon: https://ahoyrm.io/wp-content/uploads/2022/08/cropped-AHOY-Logos-Final-Transparent-03-192x192.png
+    keywords:
+    - ahoy
+    - ahoyrm
+    - releasemanager
+    - gitops
+    maintainers:
+    - name: lsdopen
+      url: https://lsdopen.io/
     name: ahoy
+    sources:
+    - https://github.com/lsdopen/ahoy-helm/tree/main/charts/ahoy
+    - https://github.com/lsdopen/ahoy
     urls:
     - https://lsdopen.github.io/ahoy-helm/ahoy-1.0.0-SNAPSHOT.tgz
     version: 1.0.0-SNAPSHOT
@@ -265,4 +279,4 @@ entries:
     urls:
     - https://lsdopen.github.io/ahoy-helm/ahoy-0.12.0-SNAPSHOT.tgz
     version: 0.12.0-SNAPSHOT
-generated: "2022-10-20T13:03:17.342101282Z"
+generated: "2022-10-21T07:58:52.363967886Z"
