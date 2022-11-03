@@ -3,7 +3,7 @@ entries:
   ahoy:
   - apiVersion: v2
     appVersion: 1.0.0-SNAPSHOT
-    created: "2022-11-02T09:59:50.785842117Z"
+    created: "2022-11-03T10:17:38.49789211Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -21,7 +21,7 @@ entries:
       repository: https://bitnami-labs.github.io/sealed-secrets
       version: 2.7.0
     description: A Helm chart for Ahoy; release manager tool for Kubernetes
-    digest: 439b6a1aae6c8c000379b094e39f7a241fbaaf43944ad624f346b318c6f9257f
+    digest: 498358a5ea66a0b8b3e83d26c5a18e2fb4bb6069a42f01edc7b0cf455730758b
     home: https://ahoyrm.io/
     icon: https://ahoyrm.io/wp-content/uploads/2022/08/cropped-AHOY-Logos-Final-Transparent-03-192x192.png
     keywords:
@@ -279,4 +279,4 @@ entries:
     urls:
     - https://lsdopen.github.io/ahoy-helm/ahoy-0.12.0-SNAPSHOT.tgz
     version: 0.12.0-SNAPSHOT
-generated: "2022-11-02T09:59:50.754209002Z"
+generated: "2022-11-03T10:17:38.471991952Z"
