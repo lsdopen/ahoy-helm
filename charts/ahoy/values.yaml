@@ -1,6 +1,5 @@
 ahoy:
   host: ahoy.minikube.host
-  clusterType: kubernetes
 
   # The Ahoy OAuth 2 OIDC configuration; by default configured to use KeyCloak
   auth:
@@ -96,11 +95,11 @@ startupProbe: |
 
 # Pod resource requests and limits
 resources: { }
-  # requests:
-  #   cpu: "500m"
-  #   memory: "1024Mi"
-  # limits:
-  #   cpu: "500m"
+# requests:
+#   cpu: "500m"
+#   memory: "1024Mi"
+# limits:
+#   cpu: "500m"
 #   memory: "1024Mi"
 
 # Additional init containers, e.g. for providing custom themes
@@ -112,12 +111,28 @@ extraInitContainers: ""
 # For example, Istio in strict mTLS mode prevents the pgchecker init container from ever completing
 skipInitContainers: false
 
+# Lifecycle hooks for the Ahoy container
+lifecycleHooks: |
+  preStop:
+    exec:
+      command: [ "/bin/sh", "-c", "sleep 3" ]
+#  postStart:
+#    exec:
+#      command:
+#        - /bin/sh
+#        - -c
+#        - ls
+
 # Termination grace period in seconds for Ahoy shutdown. Clusters with a large cache might need to extend this to give Infinispan more time to rebalance
 terminationGracePeriodSeconds: 60
 
 extraEnv: ""
-  # - name: SPRING_PROFILES
-#   value: prod,keycloak
+#- name: JAVA_OPTS
+#  value: -Xms64M -Xmx256M
+#- name: PROFILES
+#  value: prod,keycloak
+#- name: ARGS
+#  value: --spring.config.location=/tmp/config
 
 # Additional environment variables for Ahoy mapped from Secret or ConfigMap
 extraEnvFrom: ""

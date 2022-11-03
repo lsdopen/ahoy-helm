@@ -97,6 +97,10 @@ spec:
           startupProbe:
             {{- tpl . $ | nindent 12 }}
           {{- end }}
+          {{- with .Values.lifecycleHooks }}
+          lifecycle:
+          {{- tpl . $ | nindent 12 }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
