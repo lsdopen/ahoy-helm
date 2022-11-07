@@ -240,6 +240,19 @@ postgresql:
   ##
   postgresqlDatabase: ahoy
 
+  persistence:
+    ## @param persistence.enabled Enable persistence using PVC
+    ##
+    enabled: true
+    ## @param persistence.existingClaim Provide an existing `PersistentVolumeClaim`, the value is evaluated as a template.
+    ## If defined, a PVC will be created by Ahoy templates with the provided claim name
+    ## The value is evaluated as a template, so, for example, the name can depend on .Release or .Chart
+    ##
+    existingClaim: "data-ahoy-postgresql"
+    ## @param persistence.size PVC Storage Request for PostgreSQL volume
+    ##
+    size: 8Gi
+
 pgchecker:
   image:
     # Docker image used to check Postgresql readiness at startup
@@ -329,7 +342,19 @@ keycloak:
     postgresqlPassword: keycloak
     # PostgreSQL Database to create
     postgresqlDatabase: keycloak
-    # Persistent Volume Storage configuration
+
+    persistence:
+      ## @param persistence.enabled Enable persistence using PVC
+      ##
+      enabled: true
+      ## @param persistence.existingClaim Provide an existing `PersistentVolumeClaim`, the value is evaluated as a template.
+      ## If defined, a PVC will be created by Ahoy templates with the provided claim name
+      ## The value is evaluated as a template, so, for example, the name can depend on .Release or .Chart
+      ##
+      existingClaim: "data-ahoy-keycloak-postgresql"
+      ## @param persistence.size PVC Storage Request for PostgreSQL volume
+      ##
+      size: 8Gi
 
 argo-cd:
   install: true
