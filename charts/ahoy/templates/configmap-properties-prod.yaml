@@ -16,6 +16,7 @@ data:
     ahoy.auth.account-uri={{ .Values.ahoy.auth.accountUri }}
     ahoy.sealed-secrets.controller-name={{ include "sealed-secrets.fullname" (index .Subcharts "sealed-secrets") }}
     ahoy.sealed-secrets.controller-namespace={{ include "sealed-secrets.namespace" (index .Subcharts "sealed-secrets") }}
+    logging.level.za.co.lsd.ahoy=INFO
 
     server.port=8080
     server.shutdown=graceful
