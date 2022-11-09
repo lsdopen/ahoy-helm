@@ -248,7 +248,7 @@ postgresql:
     ## If defined, a PVC will be created by Ahoy templates with the provided claim name
     ## The value is evaluated as a template, so, for example, the name can depend on .Release or .Chart
     ##
-    existingClaim: "data-ahoy-postgresql"
+    existingClaim: ""
     ## @param persistence.size PVC Storage Request for PostgreSQL volume
     ##
     size: 8Gi
@@ -351,7 +351,7 @@ keycloak:
       ## If defined, a PVC will be created by Ahoy templates with the provided claim name
       ## The value is evaluated as a template, so, for example, the name can depend on .Release or .Chart
       ##
-      existingClaim: "data-ahoy-keycloak-postgresql"
+      existingClaim: ""
       ## @param persistence.size PVC Storage Request for PostgreSQL volume
       ##
       size: 8Gi
