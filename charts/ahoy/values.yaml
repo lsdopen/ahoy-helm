@@ -303,7 +303,7 @@ keycloak:
 
   service:
     # The Service type
-    type: NodePort
+    type: ClusterIP
 
   ingress:
     # If `true`, an Ingress is created
