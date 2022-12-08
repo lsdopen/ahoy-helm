@@ -1,7 +1,7 @@
 apiVersion: v2
 name: ahoy
-version: '1.0.0-SNAPSHOT'
-appVersion: '1.0.0-SNAPSHOT'
+version: '1.0.0'
+appVersion: '1.0.0'
 description: A Helm chart for Ahoy; release manager tool for Kubernetes
 home: https://ahoyrm.io/
 icon: https://ahoyrm.io/wp-content/uploads/2022/08/cropped-AHOY-Logos-Final-Transparent-03-192x192.png
